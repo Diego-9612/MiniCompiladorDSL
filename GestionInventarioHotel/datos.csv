@@ -1,0 +1,301 @@
+id_reserva,nombre_cliente,fecha_ingreso,fecha_salida,habitacion,tipo_habitacion,precio_noche,cantidad_noches,estado_reserva,metodo_pago
+1,Carina Romeu Arco,2025-01-17,2025-01-28,HAB-015,individual,290,11,confirmada,tarjeta
+2,Adolfo de Llano,2024-11-25,2024-11-28,HAB-095,individual,496,3,cancelada,transferencia
+3,Segismundo Alvarez Nieto,2024-10-18,2024-10-20,HAB-076,doble,166,2,confirmada,tarjeta
+4,Cruz Adriana Esteban Godoy,2025-04-30,2025-05-04,HAB-030,suite,458,4,confirmada,transferencia
+5,Manuel Casas Alvarado,2025-05-04,2025-05-08,HAB-092,suite,429,4,pendiente,tarjeta
+6,Esmeralda Leal Varela,2025-02-24,2025-03-04,HAB-076,doble,153,8,confirmada,transferencia
+7,Ángel Tudela Lucena,2025-02-25,2025-03-04,HAB-044,doble,229,7,confirmada,efectivo
+8,Quirino Cruz Pons Sainz,2024-08-04,2024-08-06,HAB-012,doble,199,2,pendiente,efectivo
+9,Eugenio de Posada,2025-03-29,2025-04-08,HAB-034,individual,385,10,cancelada,tarjeta
+10,Pánfilo Medina Bautista,2024-08-02,2024-08-09,HAB-011,suite,300,7,cancelada,transferencia
+11,Prudencia José Julián Quintanilla,2024-08-25,2024-09-08,HAB-047,suite,248,14,cancelada,tarjeta
+12,Fito Barberá Malo,2024-12-04,2024-12-05,HAB-085,individual,298,1,confirmada,tarjeta
+13,Adolfo Pareja Nieto,2024-06-01,2024-06-15,HAB-013,doble,292,14,pendiente,transferencia
+14,Cesar Rojas Porcel,2025-03-18,2025-04-01,HAB-047,individual,339,14,pendiente,tarjeta
+15,Alfonso Mate Acuña,2024-10-10,2024-10-21,HAB-035,suite,499,11,cancelada,tarjeta
+16,Plácido Ávila Salmerón,2025-04-04,2025-04-14,HAB-082,individual,423,10,cancelada,tarjeta
+17,Angelita Borja Urrutia,2024-11-13,2024-11-16,HAB-060,doble,288,3,cancelada,transferencia
+18,Octavia Moll Gordillo,2025-04-12,2025-04-21,HAB-029,suite,316,9,confirmada,tarjeta
+19,Irma Castell Mármol,2024-12-24,2025-01-07,HAB-005,doble,355,14,pendiente,tarjeta
+20,Esteban Correa Barba,2025-02-26,2025-03-02,HAB-073,suite,311,4,confirmada,transferencia
+21,Beatriz Jara Camps,2025-01-08,2025-01-16,HAB-051,suite,384,8,confirmada,efectivo
+22,Bonifacio del Romeu,2025-01-21,2025-01-24,HAB-032,suite,437,3,cancelada,efectivo
+23,Tere Ponce Vilalta,2024-09-13,2024-09-25,HAB-075,doble,448,12,pendiente,efectivo
+24,Rufina Collado,2024-12-07,2024-12-11,HAB-018,suite,402,4,confirmada,tarjeta
+25,Alondra Peinado Aznar,2024-09-17,2024-10-01,HAB-015,individual,471,14,confirmada,transferencia
+26,Javi Benet Fabra,2024-06-18,2024-06-25,HAB-077,individual,347,7,pendiente,transferencia
+27,Benita Tudela Ramón,2024-10-07,2024-10-15,HAB-068,doble,433,8,confirmada,transferencia
+28,Magdalena Nogueira Cabeza,2024-10-03,2024-10-15,HAB-015,suite,424,12,pendiente,transferencia
+29,José Ángel Cabezas Ocaña,2024-07-20,2024-07-26,HAB-015,doble,372,6,confirmada,efectivo
+30,Melchor Guerrero Aragonés,2025-02-26,2025-02-27,HAB-093,suite,284,1,cancelada,tarjeta
+31,Amaro Carlos-Sales,2024-09-23,2024-10-02,HAB-014,suite,302,9,cancelada,transferencia
+32,Mohamed del Royo,2025-01-05,2025-01-15,HAB-026,individual,341,10,confirmada,transferencia
+33,Blanca Company Clavero,2025-01-18,2025-01-31,HAB-068,individual,456,13,pendiente,efectivo
+34,Raquel Gracia Castillo,2024-05-15,2024-05-16,HAB-015,doble,307,1,confirmada,tarjeta
+35,Cristian Baena Rosell,2025-04-05,2025-04-09,HAB-073,individual,193,4,cancelada,efectivo
+36,Luciano Torrecilla Boada,2024-07-21,2024-08-04,HAB-009,suite,214,14,confirmada,transferencia
+37,Benito Bauzà Polo,2024-07-02,2024-07-10,HAB-071,individual,285,8,cancelada,transferencia
+38,Rosaura Adán Gallardo,2024-05-20,2024-05-27,HAB-028,suite,252,7,cancelada,efectivo
+39,Lucila Ricarda Pons Alfonso,2025-03-24,2025-03-31,HAB-086,suite,341,7,pendiente,transferencia
+40,Tadeo Esparza Mancebo,2024-11-16,2024-11-24,HAB-016,individual,265,8,confirmada,efectivo
+41,Duilio Costa Redondo,2024-12-11,2024-12-12,HAB-076,suite,267,1,cancelada,tarjeta
+42,Ale Corominas Salvà,2024-10-07,2024-10-08,HAB-010,suite,473,1,confirmada,tarjeta
+43,Emiliana Loida Colomer Mosquera,2025-02-08,2025-02-10,HAB-005,doble,186,2,cancelada,tarjeta
+44,Luis Miguel de Barreda,2024-10-27,2024-11-01,HAB-086,doble,259,5,cancelada,tarjeta
+45,Abraham Hidalgo Raya,2025-03-28,2025-04-09,HAB-074,suite,392,12,confirmada,efectivo
+46,Teodosio Múgica Llano,2025-03-06,2025-03-19,HAB-053,individual,198,13,confirmada,transferencia
+47,Valentina Calderón Luís,2024-06-01,2024-06-08,HAB-046,doble,360,7,pendiente,transferencia
+48,Pastor de Coloma,2025-03-11,2025-03-12,HAB-087,suite,480,1,confirmada,tarjeta
+49,Lilia Azorin Cañete,2024-10-25,2024-11-01,HAB-094,doble,205,7,confirmada,tarjeta
+50,Antonio Espiridión Becerra Mendoza,2024-07-19,2024-07-23,HAB-069,doble,221,4,pendiente,tarjeta
+51,Juan Francisco Morán Manjón,2024-09-29,2024-10-04,HAB-060,individual,188,5,pendiente,transferencia
+52,Marisela Cal Barroso,2025-01-06,2025-01-08,HAB-007,suite,426,2,confirmada,tarjeta
+53,Toño Garzón Parejo,2024-11-20,2024-12-03,HAB-031,individual,358,13,pendiente,efectivo
+54,Alicia Chico Jordán,2024-08-05,2024-08-09,HAB-052,individual,234,4,pendiente,tarjeta
+55,Lorenza de Piña,2024-08-07,2024-08-14,HAB-034,doble,296,7,pendiente,transferencia
+56,Chelo Moll Almansa,2024-09-09,2024-09-21,HAB-072,suite,399,12,confirmada,tarjeta
+57,Eugenio Gonzalez Llanos,2025-03-19,2025-03-24,HAB-028,individual,446,5,cancelada,transferencia
+58,Che Morata Gallart,2024-08-24,2024-08-25,HAB-096,doble,179,1,confirmada,transferencia
+59,Poncio Calvet Navarro,2025-01-29,2025-02-06,HAB-065,suite,230,8,confirmada,transferencia
+60,Lorena Enríquez Sanz,2024-05-21,2024-05-23,HAB-024,individual,454,2,confirmada,transferencia
+61,Roberta Zaragoza Pareja,2024-12-16,2024-12-30,HAB-031,doble,211,14,cancelada,tarjeta
+62,Susana Pont Arcos,2024-12-21,2024-12-31,HAB-077,individual,467,10,confirmada,efectivo
+63,Concha Belmonte Requena,2024-08-19,2024-08-30,HAB-075,suite,417,11,pendiente,efectivo
+64,Cándido de Carvajal,2024-08-03,2024-08-07,HAB-086,suite,310,4,confirmada,efectivo
+65,Jovita Sancho,2025-01-01,2025-01-08,HAB-017,suite,480,7,pendiente,efectivo
+66,Eutimio Garcia Borja,2025-05-01,2025-05-07,HAB-097,individual,154,6,pendiente,transferencia
+67,Nazaret de Martorell,2024-08-12,2024-08-22,HAB-013,individual,425,10,confirmada,transferencia
+68,Lara Garcia Vives,2025-03-15,2025-03-20,HAB-017,doble,185,5,confirmada,efectivo
+69,Lupe Tirado Casado,2024-10-27,2024-11-01,HAB-021,doble,428,5,cancelada,efectivo
+70,Glauco Carlos,2025-03-02,2025-03-12,HAB-084,suite,154,10,cancelada,transferencia
+71,Milagros Bertrán Codina,2024-12-03,2024-12-08,HAB-085,individual,218,5,pendiente,tarjeta
+72,Carmela Martinez Rico,2024-08-01,2024-08-03,HAB-096,suite,229,2,pendiente,efectivo
+73,Jovita Gomez Fonseca,2024-10-26,2024-11-05,HAB-027,suite,325,10,confirmada,transferencia
+74,Édgar Simó,2025-02-16,2025-02-27,HAB-034,suite,400,11,pendiente,tarjeta
+75,Luis Ángel Ramiro Nadal Cortés,2024-06-19,2024-06-21,HAB-082,doble,291,2,confirmada,tarjeta
+76,Feliciano Cal Reina,2025-03-30,2025-04-05,HAB-099,individual,476,6,pendiente,tarjeta
+77,Toribio Barrio-Navas,2025-02-17,2025-03-01,HAB-057,suite,368,12,cancelada,tarjeta
+78,Micaela Pou Pedrero,2025-01-15,2025-01-17,HAB-010,suite,226,2,cancelada,tarjeta
+79,Elodia del Escrivá,2025-01-12,2025-01-26,HAB-048,suite,432,14,confirmada,efectivo
+80,Nieves Estevez Monreal,2024-07-25,2024-07-28,HAB-006,doble,336,3,confirmada,efectivo
+81,Edelmiro Escamilla Cerro,2025-02-19,2025-02-23,HAB-088,individual,491,4,confirmada,efectivo
+82,Armando Jove Torrents,2024-09-30,2024-10-13,HAB-072,doble,467,13,cancelada,tarjeta
+83,Manolo Alcalá Acosta,2024-12-10,2024-12-14,HAB-021,individual,361,4,confirmada,tarjeta
+84,Sonia Gallo,2025-01-27,2025-02-08,HAB-043,doble,492,12,cancelada,tarjeta
+85,Maximiliano de Aroca,2024-10-08,2024-10-13,HAB-021,suite,205,5,pendiente,tarjeta
+86,Fidel Anaya,2024-07-22,2024-08-05,HAB-061,individual,252,14,pendiente,efectivo
+87,María Fernanda Redondo-Chaves,2024-11-02,2024-11-07,HAB-030,individual,162,5,cancelada,tarjeta
+88,Ainoa Oller,2025-03-19,2025-03-26,HAB-043,doble,185,7,pendiente,efectivo
+89,José Antonio Rómulo Diego Almansa,2024-07-12,2024-07-23,HAB-066,doble,497,11,cancelada,efectivo
+90,Evaristo Rodrigo Mateo,2024-10-06,2024-10-07,HAB-015,doble,241,1,cancelada,efectivo
+91,Clara Ibáñez Folch,2024-09-20,2024-09-21,HAB-014,suite,372,1,pendiente,transferencia
+92,Jose Carlos Herranz Romeu,2024-09-20,2024-10-03,HAB-041,doble,460,13,cancelada,tarjeta
+93,Herberto Gimenez Solé,2024-09-12,2024-09-19,HAB-074,individual,280,7,confirmada,transferencia
+94,Iker Manso Galan,2025-01-23,2025-01-30,HAB-001,suite,425,7,cancelada,transferencia
+95,Vinicio Tomé Solé,2025-04-30,2025-05-12,HAB-095,suite,250,12,pendiente,efectivo
+96,Cristian Ugarte Rodríguez,2024-09-30,2024-10-02,HAB-086,doble,469,2,pendiente,transferencia
+97,Paz Cases,2025-03-10,2025-03-24,HAB-016,suite,303,14,cancelada,efectivo
+98,Mario Calatayud-Mercader,2024-10-25,2024-11-05,HAB-053,doble,356,11,cancelada,efectivo
+99,Ciriaco Sans-Pujol,2024-09-21,2024-09-30,HAB-017,individual,365,9,cancelada,efectivo
+100,Edgardo Morales,2024-06-19,2024-06-30,HAB-096,individual,465,11,cancelada,efectivo
+101,Estela Huertas Bolaños,2024-08-01,2024-08-08,HAB-071,individual,305,7,pendiente,tarjeta
+102,Elvira Bauzà-Guardia,2024-08-10,2024-08-17,HAB-075,suite,485,7,pendiente,efectivo
+103,Amparo Eva Benitez Vallés,2025-02-12,2025-02-20,HAB-057,suite,259,8,cancelada,efectivo
+104,Mayte Collado,2025-02-11,2025-02-24,HAB-095,individual,487,13,confirmada,efectivo
+105,Heriberto Marcos,2025-03-28,2025-04-06,HAB-085,suite,467,9,pendiente,tarjeta
+106,Carmelita Andres,2024-08-25,2024-09-08,HAB-097,individual,494,14,pendiente,tarjeta
+107,Judith Nogueira,2024-11-05,2024-11-18,HAB-026,individual,162,13,confirmada,tarjeta
+108,Santiago Cañellas Bravo,2025-02-18,2025-02-26,HAB-079,individual,383,8,pendiente,transferencia
+109,Reinaldo Roman Codina,2025-01-20,2025-01-30,HAB-025,suite,346,10,pendiente,efectivo
+110,Flavia Manuela Páez Ortuño,2024-06-26,2024-06-30,HAB-019,suite,152,4,confirmada,efectivo
+111,Luciana Somoza Montalbán,2024-09-04,2024-09-08,HAB-023,suite,415,4,pendiente,tarjeta
+112,Paloma Isern Pi,2024-11-06,2024-11-15,HAB-032,individual,383,9,confirmada,efectivo
+113,Emilio Gabaldón Berrocal,2025-01-19,2025-01-30,HAB-068,suite,454,11,pendiente,efectivo
+114,Constanza Rodríguez Fuertes,2024-11-02,2024-11-12,HAB-093,suite,368,10,cancelada,efectivo
+115,Natanael Saez Novoa,2024-09-18,2024-09-21,HAB-096,doble,380,3,pendiente,tarjeta
+116,Rafa Correa Palau,2024-10-17,2024-10-31,HAB-082,doble,416,14,pendiente,transferencia
+117,Dionisia Quiroga Meléndez,2024-08-28,2024-09-01,HAB-036,doble,189,4,cancelada,efectivo
+118,Josefina Armengol Mateos,2024-05-27,2024-05-31,HAB-035,doble,313,4,cancelada,tarjeta
+119,Pelayo del Mercader,2024-06-16,2024-06-19,HAB-020,individual,346,3,cancelada,tarjeta
+120,Carlota Perales Abad,2025-03-10,2025-03-22,HAB-028,individual,362,12,pendiente,efectivo
+121,Aitana Molins,2024-06-10,2024-06-19,HAB-060,doble,181,9,confirmada,efectivo
+122,Saturnina Adán Quirós,2024-08-26,2024-09-02,HAB-099,suite,160,7,cancelada,efectivo
+123,Poncio Rodrigo,2024-12-16,2024-12-24,HAB-001,doble,302,8,pendiente,efectivo
+124,Rafael Lozano Céspedes,2025-04-19,2025-04-28,HAB-096,suite,429,9,cancelada,tarjeta
+125,Miguel Ángel Avilés Olmedo,2025-04-28,2025-05-06,HAB-029,doble,373,8,pendiente,tarjeta
+126,Griselda Benítez-Daza,2025-03-19,2025-03-26,HAB-044,suite,497,7,pendiente,transferencia
+127,América Bas Martorell,2025-04-02,2025-04-05,HAB-060,individual,468,3,cancelada,tarjeta
+128,Víctor Carlos Pons,2024-11-16,2024-11-23,HAB-076,suite,489,7,confirmada,tarjeta
+129,Luís Lastra Abad,2024-09-11,2024-09-22,HAB-055,individual,386,11,confirmada,tarjeta
+130,Mamen Almeida,2024-10-16,2024-10-21,HAB-049,doble,258,5,pendiente,efectivo
+131,Jacinto Miguel-Isern,2024-10-28,2024-11-03,HAB-098,doble,292,6,pendiente,efectivo
+132,Edmundo Jove Escolano,2025-03-25,2025-04-08,HAB-011,doble,159,14,cancelada,transferencia
+133,Aránzazu Barrios Salgado,2025-03-18,2025-03-19,HAB-045,individual,482,1,confirmada,transferencia
+134,Soledad Calvo-Garcés,2025-01-29,2025-01-30,HAB-097,individual,276,1,confirmada,tarjeta
+135,Clotilde del Ramírez,2024-11-05,2024-11-15,HAB-020,individual,214,10,pendiente,transferencia
+136,Ruperta Cuéllar Gras,2024-09-15,2024-09-17,HAB-073,individual,388,2,cancelada,efectivo
+137,Federico Ruano Romeu,2024-10-31,2024-11-13,HAB-048,individual,460,13,cancelada,transferencia
+138,Felipa Emma Jerez Cobo,2024-12-07,2024-12-19,HAB-015,individual,309,12,confirmada,transferencia
+139,Cesar Niño Aguirre,2025-03-07,2025-03-08,HAB-040,suite,496,1,pendiente,efectivo
+140,Eloísa Feijoo Lerma,2024-05-18,2024-05-30,HAB-026,individual,453,12,cancelada,transferencia
+141,Graciela Bejarano,2025-02-08,2025-02-12,HAB-014,suite,304,4,cancelada,transferencia
+142,Benigno Baeza Gimenez,2025-02-11,2025-02-24,HAB-016,suite,171,13,pendiente,transferencia
+143,Adelia del Leiva,2024-06-05,2024-06-12,HAB-085,doble,185,7,cancelada,transferencia
+144,Nayara Villena Alba,2025-05-02,2025-05-08,HAB-002,doble,400,6,confirmada,efectivo
+145,Jordán Vilar Oliva,2024-10-31,2024-11-06,HAB-082,doble,228,6,pendiente,tarjeta
+146,María Carnero Teruel,2024-10-17,2024-10-29,HAB-067,suite,288,12,cancelada,transferencia
+147,Luis Ángel Pujadas Uriarte,2025-05-03,2025-05-16,HAB-062,doble,373,13,cancelada,transferencia
+148,Alcides Cañete Matas,2025-02-26,2025-03-03,HAB-042,individual,194,5,pendiente,efectivo
+149,Chita Navarrete Tomé,2024-12-24,2024-12-28,HAB-097,doble,441,4,cancelada,transferencia
+150,Aristides Lillo Valencia,2024-10-07,2024-10-14,HAB-044,individual,403,7,pendiente,tarjeta
+151,Emilia del Garcés,2024-07-10,2024-07-18,HAB-028,doble,282,8,pendiente,efectivo
+152,Basilio Gelabert Malo,2024-06-17,2024-06-27,HAB-090,doble,434,10,confirmada,transferencia
+153,Susana de Ripoll,2024-12-20,2024-12-24,HAB-011,individual,358,4,pendiente,transferencia
+154,Curro Cal,2024-09-02,2024-09-15,HAB-031,suite,393,13,cancelada,transferencia
+155,Amando Vilar Jordán,2024-12-05,2024-12-13,HAB-058,individual,197,8,pendiente,tarjeta
+156,Roberta Cobo Bustos,2025-04-26,2025-05-03,HAB-089,individual,306,7,cancelada,transferencia
+157,Anna Elisabet Huguet Albero,2025-01-10,2025-01-16,HAB-061,suite,421,6,pendiente,efectivo
+158,Ricarda Casanova Baró,2024-11-03,2024-11-15,HAB-071,doble,330,12,cancelada,efectivo
+159,Adrián Ballesteros,2024-11-25,2024-11-30,HAB-040,doble,268,5,confirmada,transferencia
+160,Lisandro Arévalo Sanabria,2025-02-20,2025-02-24,HAB-041,individual,424,4,cancelada,tarjeta
+161,Maxi Iriarte Fuentes,2024-12-10,2024-12-14,HAB-028,suite,397,4,pendiente,transferencia
+162,Julio Benavente,2024-08-13,2024-08-23,HAB-098,suite,455,10,pendiente,tarjeta
+163,Curro Bonet Casares,2024-10-27,2024-11-10,HAB-025,doble,266,14,pendiente,tarjeta
+164,Débora del Sedano,2024-05-08,2024-05-13,HAB-002,suite,423,5,confirmada,efectivo
+165,Ambrosio Cifuentes Becerra,2024-06-26,2024-06-27,HAB-007,suite,299,1,cancelada,tarjeta
+166,Andrea Morell Blanca,2025-01-20,2025-01-31,HAB-097,doble,202,11,confirmada,transferencia
+167,Gema Pont-Báez,2024-07-28,2024-08-02,HAB-061,doble,375,5,pendiente,tarjeta
+168,Eva Carmelita Navarrete Sebastián,2024-06-27,2024-06-28,HAB-033,doble,208,1,confirmada,efectivo
+169,Natalio Íñigo Salom Figueras,2024-12-12,2024-12-20,HAB-010,suite,472,8,cancelada,tarjeta
+170,Rolando Emiliano Vallejo Landa,2024-11-04,2024-11-07,HAB-020,suite,305,3,confirmada,tarjeta
+171,Marc Ortuño-Pallarès,2025-01-20,2025-01-22,HAB-072,doble,460,2,cancelada,transferencia
+172,Hugo Ibáñez-Montoya,2025-01-22,2025-01-26,HAB-100,suite,344,4,pendiente,efectivo
+173,Asunción de Tello,2025-02-03,2025-02-08,HAB-076,doble,306,5,cancelada,transferencia
+174,Morena Herrera Alcalá,2025-04-15,2025-04-16,HAB-079,suite,200,1,confirmada,transferencia
+175,Patricio Real Aramburu,2024-09-12,2024-09-16,HAB-034,suite,191,4,confirmada,tarjeta
+176,José Antonio Artigas Rodrigo,2025-03-06,2025-03-09,HAB-071,individual,230,3,confirmada,efectivo
+177,Gracia Garriga Valera,2025-05-03,2025-05-11,HAB-089,suite,390,8,pendiente,tarjeta
+178,Haroldo Ciriaco González Coloma,2025-04-18,2025-04-22,HAB-037,suite,294,4,cancelada,efectivo
+179,Narciso Barriga-Vall,2024-12-10,2024-12-12,HAB-088,individual,285,2,cancelada,transferencia
+180,Apolonia Vargas Pallarès,2025-01-17,2025-01-28,HAB-026,doble,208,11,cancelada,tarjeta
+181,Belén Vera Gutiérrez Fiol,2024-11-09,2024-11-20,HAB-020,doble,222,11,confirmada,tarjeta
+182,Baltasar Cortes Galiano,2024-07-13,2024-07-16,HAB-040,suite,441,3,pendiente,efectivo
+183,Bautista Asenjo Echeverría,2025-01-29,2025-01-31,HAB-060,suite,305,2,cancelada,efectivo
+184,Nazaret Trillo Segovia,2025-02-08,2025-02-13,HAB-065,suite,402,5,pendiente,tarjeta
+185,Juliana Alba Mateos,2024-07-01,2024-07-11,HAB-006,doble,315,10,cancelada,efectivo
+186,Alejo del Aller,2024-07-03,2024-07-04,HAB-012,individual,495,1,cancelada,transferencia
+187,Cornelio Lara Sans,2025-01-24,2025-01-25,HAB-098,suite,287,1,cancelada,tarjeta
+188,Rosenda Malo Zurita,2025-01-07,2025-01-20,HAB-097,individual,390,13,cancelada,transferencia
+189,Felicia Villanueva Esteve,2024-05-24,2024-06-01,HAB-036,individual,449,8,pendiente,transferencia
+190,Teófilo Iniesta Somoza,2024-10-11,2024-10-25,HAB-063,individual,390,14,pendiente,efectivo
+191,Juanito Baró,2024-11-08,2024-11-14,HAB-042,suite,203,6,confirmada,efectivo
+192,Roberto Escribano Tejero,2024-12-12,2024-12-19,HAB-089,doble,297,7,cancelada,efectivo
+193,Úrsula Lucas Rosselló,2024-07-28,2024-08-11,HAB-098,suite,168,14,pendiente,tarjeta
+194,Jose Francisco Morata Carbó,2024-07-10,2024-07-16,HAB-033,doble,209,6,pendiente,transferencia
+195,Felipa Montaña Riquelme,2024-07-03,2024-07-17,HAB-001,suite,427,14,pendiente,efectivo
+196,Leonor Ferrán Frutos,2024-05-31,2024-06-01,HAB-025,suite,335,1,cancelada,efectivo
+197,Mamen Colomer Alfaro,2024-10-02,2024-10-13,HAB-057,individual,254,11,pendiente,transferencia
+198,Rolando Raya Montserrat,2024-08-17,2024-08-20,HAB-037,doble,398,3,confirmada,tarjeta
+199,África Esparza Mateos,2024-08-27,2024-09-07,HAB-078,individual,231,11,pendiente,transferencia
+200,Regina Seguí Tur,2024-09-20,2024-09-21,HAB-071,doble,197,1,confirmada,tarjeta
+201,Berto Noé Dueñas Madrid,2024-07-12,2024-07-20,HAB-016,suite,228,8,pendiente,transferencia
+202,Nazaret Mínguez Portillo,2024-09-17,2024-09-22,HAB-066,suite,289,5,pendiente,efectivo
+203,Tito Girona,2025-03-09,2025-03-17,HAB-032,doble,432,8,confirmada,efectivo
+204,Jose Manuel Méndez Briones,2024-05-17,2024-05-21,HAB-077,suite,219,4,confirmada,efectivo
+205,Cayetano Joan Giménez Zorrilla,2025-04-01,2025-04-14,HAB-054,doble,409,13,pendiente,tarjeta
+206,Bruno Abella Francisco,2024-08-05,2024-08-10,HAB-093,doble,450,5,cancelada,transferencia
+207,Mamen del Muñoz,2024-09-28,2024-10-06,HAB-020,doble,425,8,pendiente,efectivo
+208,Eugenia Samper Pedraza,2025-02-24,2025-03-02,HAB-071,suite,343,6,pendiente,efectivo
+209,Cirino Pablo Pina,2024-11-13,2024-11-27,HAB-025,suite,272,14,cancelada,efectivo
+210,Juan Carlos Francisco Javier Bellido Alonso,2025-04-30,2025-05-04,HAB-100,doble,172,4,pendiente,transferencia
+211,Paula Olivé Cañellas,2025-01-23,2025-01-31,HAB-091,doble,347,8,cancelada,transferencia
+212,Espiridión Sanjuan Murillo,2025-04-19,2025-04-22,HAB-064,individual,214,3,cancelada,transferencia
+213,Trinidad Cal-Iniesta,2024-06-23,2024-06-29,HAB-013,doble,201,6,cancelada,efectivo
+214,Heliodoro Hervia Aragón,2024-09-25,2024-09-26,HAB-093,individual,359,1,cancelada,tarjeta
+215,Lupe Jove,2024-11-06,2024-11-08,HAB-061,doble,323,2,cancelada,transferencia
+216,Ainara Concha Escalona Segura,2024-12-16,2024-12-23,HAB-084,individual,318,7,cancelada,transferencia
+217,Ignacio Gil Casanovas Torre,2024-06-25,2024-07-02,HAB-041,suite,399,7,cancelada,tarjeta
+218,Pánfilo Sáez Ramírez,2024-05-12,2024-05-22,HAB-009,individual,473,10,cancelada,efectivo
+219,Xavier Adán,2025-03-04,2025-03-08,HAB-096,individual,372,4,confirmada,transferencia
+220,Miguel Soler Leiva,2024-05-26,2024-06-07,HAB-013,doble,235,12,cancelada,efectivo
+221,Ricardo Alvarado Nadal,2024-05-26,2024-05-27,HAB-006,doble,178,1,pendiente,efectivo
+222,Jose Miguel Antúnez Arias,2024-11-11,2024-11-17,HAB-056,individual,275,6,cancelada,efectivo
+223,Amaro Casemiro Madrigal Calleja,2024-08-31,2024-09-10,HAB-088,individual,237,10,confirmada,tarjeta
+224,Teresa Martínez Echevarría,2025-03-03,2025-03-13,HAB-049,suite,499,10,confirmada,efectivo
+225,Ángela del Peinado,2024-07-22,2024-08-01,HAB-019,individual,386,10,cancelada,efectivo
+226,Esperanza Ramona Lloret Palomino,2025-02-16,2025-02-24,HAB-033,suite,154,8,pendiente,efectivo
+227,María Belén Hervia Quero,2025-03-27,2025-04-07,HAB-070,individual,187,11,pendiente,efectivo
+228,Candelaria Benavides Izaguirre,2024-09-23,2024-10-03,HAB-039,suite,367,10,cancelada,efectivo
+229,Elpidio del Bustos,2024-09-13,2024-09-21,HAB-039,individual,346,8,pendiente,tarjeta
+230,Graciela Molina Cuervo,2025-02-23,2025-02-27,HAB-049,suite,333,4,cancelada,efectivo
+231,Victor Aragón-Mayoral,2024-06-27,2024-07-09,HAB-038,individual,487,12,pendiente,efectivo
+232,Victor Caparrós Cuéllar,2025-02-22,2025-02-23,HAB-073,suite,175,1,cancelada,transferencia
+233,Felipa Paniagua-Casals,2024-12-26,2025-01-03,HAB-037,individual,460,8,pendiente,tarjeta
+234,Marcelino Arranz Amaya,2024-11-14,2024-11-25,HAB-025,suite,278,11,cancelada,transferencia
+235,Gastón Cid Amaya,2024-06-20,2024-07-03,HAB-085,suite,220,13,cancelada,tarjeta
+236,María Del Carmen Nadal Peña,2024-06-24,2024-07-05,HAB-083,individual,308,11,pendiente,tarjeta
+237,Bruno de Moreno,2024-07-22,2024-08-01,HAB-047,suite,217,10,confirmada,efectivo
+238,Alex Falcó Solano,2024-12-01,2024-12-07,HAB-096,doble,239,6,confirmada,tarjeta
+239,Agustina Tapia Tur,2025-04-02,2025-04-15,HAB-070,doble,421,13,cancelada,efectivo
+240,Bautista Cánovas Azcona,2024-09-17,2024-10-01,HAB-022,doble,396,14,pendiente,transferencia
+241,Eli Priego-Tejera,2024-08-02,2024-08-16,HAB-044,individual,389,14,confirmada,tarjeta
+242,Tania Leon Solsona,2024-09-15,2024-09-28,HAB-029,suite,495,13,pendiente,transferencia
+243,María Jesús Josefa Gonzalo Olivera,2024-09-22,2024-09-28,HAB-012,doble,157,6,pendiente,transferencia
+244,Primitiva Mayo Parra,2024-07-29,2024-07-31,HAB-059,doble,494,2,cancelada,transferencia
+245,Adalberto Reinaldo Crespi Manzano,2025-02-20,2025-02-25,HAB-075,doble,476,5,pendiente,tarjeta
+246,Haroldo Pedrosa,2024-12-08,2024-12-19,HAB-030,doble,162,11,cancelada,transferencia
+247,Ceferino Prieto-Noriega,2024-08-22,2024-08-28,HAB-079,individual,481,6,confirmada,transferencia
+248,Julieta Cerdán-Miranda,2024-06-30,2024-07-14,HAB-060,suite,304,14,cancelada,efectivo
+249,Catalina Virginia Castilla Belmonte,2024-12-22,2024-12-24,HAB-018,individual,169,2,pendiente,efectivo
+250,Heriberto Gallardo-Nogués,2024-12-12,2024-12-14,HAB-013,individual,425,2,confirmada,efectivo
+251,Octavio Gutiérrez Salvador,2024-10-02,2024-10-10,HAB-048,suite,426,8,pendiente,transferencia
+252,Moisés Orozco-Piquer,2024-05-15,2024-05-27,HAB-094,individual,362,12,cancelada,tarjeta
+253,Encarna Tena,2024-11-30,2024-12-14,HAB-063,suite,358,14,pendiente,tarjeta
+254,Úrsula Yolanda Juan Sanabria,2025-01-06,2025-01-18,HAB-048,individual,377,12,pendiente,tarjeta
+255,Adriana Tena Álvarez,2024-06-25,2024-07-09,HAB-047,individual,338,14,cancelada,transferencia
+256,Ignacio Fabricio Falcó Pedro,2024-05-18,2024-05-24,HAB-008,doble,291,6,confirmada,tarjeta
+257,Ezequiel Barbero Riera,2024-09-02,2024-09-16,HAB-059,individual,489,14,confirmada,transferencia
+258,Feliciano Morales Olmo,2025-04-16,2025-04-27,HAB-077,individual,175,11,pendiente,tarjeta
+259,Godofredo Ferrández-Caparrós,2025-01-16,2025-01-19,HAB-073,individual,185,3,cancelada,tarjeta
+260,Demetrio Alba Dávila,2024-07-05,2024-07-15,HAB-028,individual,318,10,confirmada,transferencia
+261,Fernanda Marita Robles Mayoral,2024-10-20,2024-10-21,HAB-036,individual,216,1,cancelada,efectivo
+262,Fabiana Martínez Belmonte,2024-12-06,2024-12-19,HAB-023,individual,488,13,confirmada,tarjeta
+263,Calixto Recio Hervia,2024-05-15,2024-05-16,HAB-046,individual,451,1,pendiente,tarjeta
+264,Josué Acero Uriarte,2024-11-07,2024-11-10,HAB-034,individual,214,3,cancelada,efectivo
+265,Florinda Casares-Pozuelo,2024-12-18,2024-12-27,HAB-015,suite,182,9,pendiente,efectivo
+266,Renato Vicens Coello,2024-07-29,2024-08-11,HAB-047,suite,453,13,confirmada,efectivo
+267,Violeta Maldonado Ángel,2025-01-17,2025-01-26,HAB-029,suite,172,9,cancelada,transferencia
+268,Baltasar de Ripoll,2024-11-20,2024-11-29,HAB-039,doble,479,9,confirmada,tarjeta
+269,José Luis de Albero,2025-03-22,2025-03-30,HAB-052,doble,205,8,pendiente,transferencia
+270,Baudelio Navarro Tello,2024-07-10,2024-07-18,HAB-010,individual,314,8,cancelada,tarjeta
+271,Arturo Arroyo Ramírez,2024-08-08,2024-08-10,HAB-017,doble,469,2,cancelada,transferencia
+272,Ale de Planas,2025-04-09,2025-04-18,HAB-092,doble,345,9,cancelada,transferencia
+273,Galo Falcó Linares,2024-08-13,2024-08-18,HAB-059,suite,459,5,pendiente,tarjeta
+274,Jose Carlos Vito Roda Huguet,2024-11-18,2024-12-01,HAB-090,individual,485,13,cancelada,transferencia
+275,Loida del Casares,2025-02-23,2025-03-07,HAB-028,doble,381,12,confirmada,efectivo
+276,Ester Molins Estévez,2024-05-17,2024-05-23,HAB-059,doble,362,6,cancelada,tarjeta
+277,María Belén Jove,2025-03-02,2025-03-08,HAB-055,doble,490,6,pendiente,efectivo
+278,Reynaldo Menendez Martinez,2025-03-10,2025-03-13,HAB-088,doble,184,3,confirmada,tarjeta
+279,Azeneth Catalán,2025-05-03,2025-05-05,HAB-056,individual,340,2,confirmada,transferencia
+280,Carmen García Zorrilla,2024-08-24,2024-08-25,HAB-076,suite,437,1,pendiente,transferencia
+281,Filomena de Valdés,2025-04-21,2025-04-23,HAB-053,doble,490,2,pendiente,transferencia
+282,Gervasio Riquelme Santos,2024-11-27,2024-11-28,HAB-037,suite,309,1,pendiente,tarjeta
+283,Maricruz Dalila Reig Méndez,2024-11-22,2024-12-02,HAB-065,individual,229,10,cancelada,efectivo
+284,Bienvenida Roig,2024-07-04,2024-07-08,HAB-014,doble,434,4,pendiente,tarjeta
+285,Juan José Tomás Tovar,2024-07-15,2024-07-28,HAB-036,suite,265,13,pendiente,transferencia
+286,Candelas Busquets Belda,2025-01-01,2025-01-14,HAB-080,suite,495,13,cancelada,transferencia
+287,Emma Pallarès Guitart,2024-09-20,2024-09-21,HAB-078,suite,286,1,confirmada,tarjeta
+288,Prudencia Escribano Salvador,2024-12-17,2024-12-22,HAB-090,doble,323,5,pendiente,tarjeta
+289,Cándido Ordóñez Molina,2025-02-27,2025-03-02,HAB-019,suite,486,3,pendiente,tarjeta
+290,Graciela Torrent Arregui,2025-02-24,2025-02-27,HAB-095,suite,165,3,confirmada,transferencia
+291,Rico Ferreras Quiroga,2025-01-29,2025-02-07,HAB-028,doble,364,9,pendiente,efectivo
+292,Elvira Pacífica Bonet Fajardo,2024-05-17,2024-05-20,HAB-048,doble,316,3,cancelada,transferencia
+293,Manola Castells,2025-03-24,2025-03-26,HAB-007,individual,230,2,cancelada,tarjeta
+294,Benjamín Villalobos Bárcena,2025-01-27,2025-02-07,HAB-011,doble,376,11,cancelada,efectivo
+295,Liliana Eusebia Salom Julián,2024-06-09,2024-06-17,HAB-078,doble,362,8,pendiente,tarjeta
+296,Isidoro Marcos Exposito,2025-02-17,2025-03-02,HAB-066,individual,326,13,pendiente,tarjeta
+297,Mateo Villalobos Campo,2025-02-23,2025-02-28,HAB-087,suite,453,5,pendiente,transferencia
+298,Diana Ramírez Flor,2025-01-28,2025-02-08,HAB-040,individual,262,11,pendiente,transferencia
+299,Albano Olmedo-Almeida,2024-08-07,2024-08-08,HAB-001,individual,304,1,confirmada,tarjeta
+300,Evangelina Ignacia Ferreras Alegre,2025-05-08,2025-05-21,HAB-033,doble,317,13,confirmada,tarjeta
