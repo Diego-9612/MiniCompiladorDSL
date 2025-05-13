@@ -1,94 +1,174 @@
-import csv
-from CSVFilterVisitor import CSVFilterVisitor
+import pandas as pd
+from antlr4 import ParseTreeVisitor
 
-class MyCSVVisitor(CSVFilterVisitor):
+class CSVProcessingError(Exception):
+    """Excepción personalizada para errores de procesamiento"""
+    pass
+
+class MyCSVVisitor(ParseTreeVisitor):
     def __init__(self):
-        self.data = []
-        self.filtered_data = []
-        self.filename = ""
-        self.filtros = []
+        self.original_data = None     # Datos originales del CSV
+        self.filtered_data = None      # Datos después de aplicar filtros
+        self.aggregation_result = None # Resultado de agregaciones
+        self.active_filters = []       # Lista de condiciones de filtro activas
+
+    def visitProg(self, ctx):
+        """Visita el programa completo ejecutando todos los comandos"""
+        for stat in ctx.stat():
+            self.visit(stat)
+        return self
 
     def visitLoadStat(self, ctx):
-        self.filename = ctx.STRING().getText().replace('"', '')
-        with open(self.filename, newline='') as f:
-            self.data = list(csv.DictReader(f))
-        self.filtered_data = self.data
-        return None
+        """Procesa el comando LOAD"""
+        try:
+            filename = ctx.STRING().getText().strip('"')
+            self.original_data = pd.read_csv(filename)
+            self.filtered_data = self.original_data.copy()
+            self.active_filters = []
+            print(f"\n✅ CSV cargado: {filename} ({len(self.original_data)} registros)")
+        except FileNotFoundError:
+            raise CSVProcessingError(f"Archivo no encontrado: {filename}")
+        except Exception as e:
+            raise CSVProcessingError(f"Error cargando CSV: {str(e)}")
 
     def visitFilterStat(self, ctx):
-        # Aquí manejamos los filtros compuestos, AND, OR, y BETWEEN
-        expr = self.visit(ctx.expr())  # Se procesa la expresión que puede ser lógica o de comparación
-        self.filtered_data = [
-            row for row in self.filtered_data if expr(row)
-        ]
-        return None
+        """Procesa el comando FILTER con manejo de múltiples condiciones"""
+        try:
+            new_condition = self.visit(ctx.expr())
+            self.active_filters.append(new_condition)
+            
+            # Aplicar todos los filtros acumulativamente
+            combined_condition = pd.Series(True, index=self.original_data.index)
+            for cond in self.active_filters:
+                # Alinear índices y manejar valores faltantes
+                aligned_cond = cond.reindex_like(combined_condition).fillna(False)
+                combined_condition &= aligned_cond
+                
+            self.filtered_data = self.original_data[combined_condition]
+            print(f"🔎 Filtro aplicado. Registros restantes: {len(self.filtered_data)}")
+            
+        except KeyError as e:
+            print(f"❌ Error en filtro: Columna {str(e)} no existe")
+            self.active_filters.pop()
+        except Exception as e:
+            print(f"❌ Error aplicando filtro: {str(e)}")
+            self.active_filters.pop()
 
     def visitAggregateStat(self, ctx):
-        func = ctx.FUNC_NAME().getText()
-        column = ctx.STRING().getText().replace('"', '')
-        condition = ctx.expr()  # 'where' expresión condicional (opcional)
-
-        if condition:
-            condition_func = self.visit(condition)  # Filtramos si hay condición
-            filtered_data = [row for row in self.data if condition_func(row)]
-        else:
-            filtered_data = self.data
-
-        # Aplicar función de agregación
-        if func == 'COUNT':
-            print(f"Total registros en {column}: {len(filtered_data)}")
-        elif func == 'SUM':
-            total_sum = sum(int(row[column]) for row in filtered_data if row[column].isdigit())
-            print(f"Suma de {column}: {total_sum}")
-        elif func == 'AVERAGE':
-            total_sum = sum(int(row[column]) for row in filtered_data if row[column].isdigit())
-            average = total_sum / len(filtered_data) if len(filtered_data) > 0 else 0
-            print(f"Promedio de {column}: {average:.2f}")
-
-        return None
+        """Procesa el comando AGGREGATE con validación de tipos"""
+        try:
+            func = ctx.FUNC_NAME().getText()
+            column = ctx.STRING().getText().strip('"')
+            
+            # Validar existencia de columna
+            if column not in self.filtered_data.columns:
+                raise CSVProcessingError(f"Columna '{column}' no encontrada")
+            
+            # Validar tipo para operaciones numéricas
+            if func in ['SUM', 'AVERAGE']:
+                if not pd.api.types.is_numeric_dtype(self.filtered_data[column]):
+                    raise CSVProcessingError(f"Columna '{column}' debe ser numérica")
+            
+            # Aplicar filtro WHERE si existe
+            subset = self.filtered_data
+            if ctx.expr():
+                condition = self.visit(ctx.expr())
+                subset = self.filtered_data[condition]
+                print(f"🔧 Filtro WHERE aplicado. Registros usados: {len(subset)}")
+            
+            # Ejecutar agregación
+            if func == "SUM":
+                self.aggregation_result = subset[column].sum()
+            elif func == "COUNT":
+                self.aggregation_result = subset.shape[0]
+            elif func == "AVERAGE":
+                self.aggregation_result = subset[column].mean()
+            else:
+                raise CSVProcessingError(f"Función no soportada: {func}")
+            
+            print(f"\n📊 Resultado de {func}({column}): {self.aggregation_result:.2f}")
+            
+        except CSVProcessingError as e:
+            print(f"❌ Error en agregación: {e}")
 
     def visitPrintStat(self, ctx):
-        for row in self.filtered_data:
-            print(row)
-        return None
+        """Procesa el comando PRINT"""
+        print("\n📄 Datos actuales:")
+        print(self.filtered_data.to_string(index=False))
+        print(f"\nMostrando {len(self.filtered_data)} de {len(self.original_data)} registros")
 
     def visitLogicalExpr(self, ctx):
-        # Maneja las expresiones lógicas AND/OR
-        left_expr = self.visit(ctx.expr(0))
-        right_expr = self.visit(ctx.expr(1))
-        logical_op = ctx.LOGICAL_OP().getText()
-
-        if logical_op == "AND":
-            return lambda row: left_expr(row) and right_expr(row)
-        elif logical_op == "OR":
-            return lambda row: left_expr(row) or right_expr(row)
+        """Maneja expresiones lógicas (AND/OR)"""
+        left = self.visit(ctx.expr(0))
+        right = self.visit(ctx.expr(1))
+        op = ctx.LOGICAL_OP().getText()
+        
+        try:
+            if op == "AND":
+                return left & right
+            return left | right
+        except Exception as e:
+            raise CSVProcessingError(f"Error en operación {op}: {str(e)}")
 
     def visitComparisonExpr(self, ctx):
-        column = ctx.STRING().getText().replace('"', '')
-        op = ctx.OPERATOR().getText()
-        value = ctx.value().getText().replace('"', '')  # Obtener el valor como texto (sin las comillas)
-
-        # Verificar si el valor es numérico o una cadena
+        """Maneja comparaciones (=, !=, >, <, etc)"""
         try:
-            # Intentar convertir el valor a un número (float o int)
-            value = float(value)
-            is_numeric = True
-        except ValueError:
-            # Si no se puede convertir a número, es una cadena
-            is_numeric = False
-
-        # Si es numérico, realizamos la comparación numérica
-        if is_numeric:
-            return lambda row: eval(f"{float(row[column])} {op} {value}")
-        else:
-            # Si es cadena, realizamos la comparación de cadenas
-            return lambda row: eval(f"'{row[column]}' {op} '{value}'")
+            col = ctx.STRING().getText().strip('"')
+            operator = ctx.OPERATOR().getText()
+            value = self.visit(ctx.value())
+            
+            # Validar columna
+            if col not in self.original_data.columns:
+                raise CSVProcessingError(f"Columna '{col}' no existe")
+            
+            # Validar tipo de datos
+            col_type = self.original_data[col].dtype
+            if isinstance(value, (int, float)) and not pd.api.types.is_numeric_dtype(col_type):
+                raise CSVProcessingError(f"Columna '{col}' no es numérica")
+            elif isinstance(value, str) and pd.api.types.is_numeric_dtype(col_type):
+                raise CSVProcessingError(f"Columna '{col}' es numérica, no se puede comparar con texto")
+            
+            # Generar condición
+            if operator == "==": return self.original_data[col] == value
+            elif operator == "!=": return self.original_data[col] != value
+            elif operator == ">": return self.original_data[col] > value
+            elif operator == "<": return self.original_data[col] < value
+            elif operator == ">=": return self.original_data[col] >= value
+            elif operator == "<=": return self.original_data[col] <= value
+            
+        except Exception as e:
+            print(f"❌ Error en condición: {str(e)}")
+            return pd.Series(False, index=self.original_data.index)
 
     def visitBetweenExpr(self, ctx):
-        column = ctx.STRING().getText().replace('"', '')
-        low_value = float(ctx.value(0).getText())
-        high_value = float(ctx.value(1).getText())
+        try:
+            col = ctx.STRING().getText().strip('"')
+            lower = self.visit(ctx.value(0))  # ❌ Error: Paréntesis extra
+            upper = self.visit(ctx.value(1))  # ❌ Error: Paréntesis extra
+            
+            # Validar columna
+            if col not in self.original_data.columns:
+                raise CSVProcessingError(f"Columna '{col}' no existe")
+                
+            # Convertir fechas
+            if "fecha" in col:
+                self.original_data[col] = pd.to_datetime(
+                    self.original_data[col], 
+                    errors='coerce'
+                    )
+            lower = pd.to_datetime(lower)
+            upper = pd.to_datetime(upper)
+            
+            return self.original_data[col].between(lower, upper, inclusive='both')
+            
+        except Exception as e:
+            print(f"❌ Error en BETWEEN: {str(e)}")
+            return pd.Series(False, index=self.original_data.index)
 
-        # Expresión de tipo BETWEEN
-        return lambda row: low_value <= float(row[column]) <= high_value
-
+    def visitValue(self, ctx):
+        """Convierte valores a tipos Python apropiados"""
+        if ctx.NUMBER():
+            num_str = ctx.NUMBER().getText()
+            return float(num_str) if '.' in num_str else int(num_str)
+        elif ctx.STRING():
+            return ctx.STRING().getText().strip('"')

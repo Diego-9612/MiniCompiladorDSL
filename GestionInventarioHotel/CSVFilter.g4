@@ -28,6 +28,8 @@ FUNC_NAME: 'COUNT' | 'SUM' | 'AVERAGE' ;
 
 LOGICAL_OP: 'AND' | 'OR' ;
 
+BETWEEN: 'BETWEEN';  // <-- Añade esta línea
+
 OPERATOR: '>' | '<' | '>=' | '<=' | '==' | '!=' ;
 
 STRING: '"' (~["\r\n])* '"' ;

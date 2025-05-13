@@ -1,4 +1,4 @@
 load "datos.csv";
-filter column "precio_noche" BETWEEN 100 AND 200;
-aggregate SUM column "precio_noche" where "estado_reserva" == "confirmada";
+aggregate COUNT column "id_reserva" where "metodo_pago" == "tarjeta";
+aggregate AVERAGE column "precio_noche" where "tipo_habitacion" == "suite";
 print;

@@ -22,13 +22,13 @@ def serializedATN():
         3,0,23,26,3,8,4,0,24,26,3,10,5,0,25,21,1,0,0,0,25,22,1,0,0,0,25,
         23,1,0,0,0,25,24,1,0,0,0,26,3,1,0,0,0,27,28,5,1,0,0,28,29,5,13,0,
         0,29,30,5,2,0,0,30,5,1,0,0,0,31,32,5,3,0,0,32,33,5,4,0,0,33,34,3,
-        12,6,0,34,35,5,2,0,0,35,7,1,0,0,0,36,37,5,5,0,0,37,38,5,10,0,0,38,
+        12,6,0,34,35,5,2,0,0,35,7,1,0,0,0,36,37,5,5,0,0,37,38,5,9,0,0,38,
         39,5,4,0,0,39,42,5,13,0,0,40,41,5,6,0,0,41,43,3,12,6,0,42,40,1,0,
         0,0,42,43,1,0,0,0,43,44,1,0,0,0,44,45,5,2,0,0,45,9,1,0,0,0,46,47,
         5,7,0,0,47,48,5,2,0,0,48,11,1,0,0,0,49,50,6,6,-1,0,50,51,5,13,0,
-        0,51,52,5,12,0,0,52,60,3,14,7,0,53,54,5,13,0,0,54,55,5,8,0,0,55,
-        56,3,14,7,0,56,57,5,9,0,0,57,58,3,14,7,0,58,60,1,0,0,0,59,49,1,0,
-        0,0,59,53,1,0,0,0,60,66,1,0,0,0,61,62,10,3,0,0,62,63,5,11,0,0,63,
+        0,51,52,5,12,0,0,52,60,3,14,7,0,53,54,5,13,0,0,54,55,5,11,0,0,55,
+        56,3,14,7,0,56,57,5,8,0,0,57,58,3,14,7,0,58,60,1,0,0,0,59,49,1,0,
+        0,0,59,53,1,0,0,0,60,66,1,0,0,0,61,62,10,3,0,0,62,63,5,10,0,0,63,
         65,3,12,6,4,64,61,1,0,0,0,65,68,1,0,0,0,66,64,1,0,0,0,66,67,1,0,
         0,0,67,13,1,0,0,0,68,66,1,0,0,0,69,70,7,0,0,0,70,15,1,0,0,0,5,19,
         25,42,59,66
@@ -45,11 +45,12 @@ class CSVFilterParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'load'", "';'", "'filter'", "'column'", 
-                     "'aggregate'", "'where'", "'print'", "'BETWEEN'", "'AND'" ]
+                     "'aggregate'", "'where'", "'print'", "'AND'", "<INVALID>", 
+                     "<INVALID>", "'BETWEEN'" ]
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "<INVALID>", "<INVALID>", "FUNC_NAME", "LOGICAL_OP", 
+                      "<INVALID>", "FUNC_NAME", "LOGICAL_OP", "BETWEEN", 
                       "OPERATOR", "STRING", "NUMBER", "WS" ]
 
     RULE_prog = 0
@@ -73,9 +74,9 @@ class CSVFilterParser ( Parser ):
     T__5=6
     T__6=7
     T__7=8
-    T__8=9
-    FUNC_NAME=10
-    LOGICAL_OP=11
+    FUNC_NAME=9
+    LOGICAL_OP=10
+    BETWEEN=11
     OPERATOR=12
     STRING=13
     NUMBER=14
@@ -543,6 +544,8 @@ class CSVFilterParser ( Parser ):
 
         def STRING(self):
             return self.getToken(CSVFilterParser.STRING, 0)
+        def BETWEEN(self):
+            return self.getToken(CSVFilterParser.BETWEEN, 0)
         def value(self, i:int=None):
             if i is None:
                 return self.getTypedRuleContexts(CSVFilterParser.ValueContext)
@@ -598,11 +601,11 @@ class CSVFilterParser ( Parser ):
                 self.state = 53
                 self.match(CSVFilterParser.STRING)
                 self.state = 54
-                self.match(CSVFilterParser.T__7)
+                self.match(CSVFilterParser.BETWEEN)
                 self.state = 55
                 self.value()
                 self.state = 56
-                self.match(CSVFilterParser.T__8)
+                self.match(CSVFilterParser.T__7)
                 self.state = 57
                 self.value()
                 pass
