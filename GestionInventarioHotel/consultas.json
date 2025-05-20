@@ -1,0 +1,306 @@
+{
+    "consultas": [
+        {
+            "id": 1,
+            "nombre": "Total reservas confirmadas",
+            "descripcion": "Cuenta todas las reservas con estado 'confirmada'",
+            "dsl": "load \"datos.csv\";\naggregate COUNT column \"id_reserva\" where \"estado_reserva\" == \"confirmada\";\nprint;"
+        },
+        {
+            "id": 2,
+            "nombre": "Precio promedio suites",
+            "descripcion": "Calcula el precio promedio de las habitaciones suite",
+            "dsl": "load \"datos.csv\";\naggregate AVERAGE column \"precio_noche\" where \"tipo_habitacion\" == \"suite\";\nprint;"
+        },
+        {
+            "id": 3,
+            "nombre": "Reservas con tarjeta",
+            "descripcion": "Filtra reservas pagadas con tarjeta",
+            "dsl": "load \"datos.csv\";\nfilter column \"metodo_pago\" == \"tarjeta\";\nprint;"
+        },
+        {
+            "id": 4,
+            "nombre": "Suma precios dobles",
+            "descripcion": "Suma total de precios en habitaciones dobles",
+            "dsl": "load \"datos.csv\";\naggregate SUM column \"precio_noche\" where \"tipo_habitacion\" == \"doble\";\nprint;"
+        },
+        {
+            "id": 6,
+            "nombre": "Reservas entre fechas",
+            "descripcion": "Filtra reservas entre 2024-12-01 y 2025-01-01",
+            "dsl": "load \"datos.csv\";\nfilter column \"fecha_ingreso\" BETWEEN \"2024-12-01\" AND \"2025-01-01\";\nprint;"
+        },
+        {
+            "id": 5,
+            "nombre": "Reservas largas",
+            "descripcion": "Filtra reservas con más de 7 noches",
+            "dsl": "load \"datos.csv\";\nfilter column \"cantidad_noches\" > 7;\nprint;"
+        },
+        
+        {
+            "id": 7,
+            "nombre": "Habitaciones más caras",
+            "descripcion": "Filtra habitaciones con precio mayor a 400",
+            "dsl": "load \"datos.csv\";\nfilter column \"precio_noche\" > 400;\nprint;"
+        },
+        {
+            "id": 8,
+            "nombre": "Reservas canceladas transferencia",
+            "descripcion": "Filtra reservas canceladas pagadas con transferencia",
+            "dsl": "load \"datos.csv\";\nfilter column \"estado_reserva\" == \"cancelada\";\nfilter column \"metodo_pago\" == \"transferencia\";\nprint;"
+        },
+        {
+            "id": 9,
+            "nombre": "Promedio noches individuales",
+            "descripcion": "Promedio de noches en habitaciones individuales",
+            "dsl": "load \"datos.csv\";\naggregate AVERAGE column \"cantidad_noches\" where \"tipo_habitacion\" == \"individual\";\nprint;"
+        },
+        {
+            "id": 10,
+            "nombre": "Reservas pendientes",
+            "descripcion": "Cuenta reservas con estado 'pendiente'",
+            "dsl": "load \"datos.csv\";\naggregate COUNT column \"id_reserva\" where \"estado_reserva\" == \"pendiente\";\nprint;"
+        },
+
+        {
+            "id": 11,
+            "nombre": "Reservas habitación específica",
+            "descripcion": "Filtra reservas en la habitación HAB-015",
+            "dsl": "load \"datos.csv\";\nfilter column \"habitacion\" == \"HAB-015\";\nprint;"
+        },
+        {
+            "id": 12,
+            "nombre": "Pagos en efectivo",
+            "descripcion": "Reservas pagadas con efectivo",
+            "dsl": "load \"datos.csv\";\nfilter column \"metodo_pago\" == \"efectivo\";\nprint;"
+        },
+        {
+            "id": 13,
+            "nombre": "Precio promedio dobles",
+            "descripcion": "Calcula el precio promedio de habitaciones dobles",
+            "dsl": "load \"datos.csv\";\naggregate AVERAGE column \"precio_noche\" where \"tipo_habitacion\" == \"doble\";\nprint;"
+        },
+        {
+            "id": 14,
+            "nombre": "Reservas muy largas",
+            "descripcion": "Filtra reservas con más de 10 noches",
+            "dsl": "load \"datos.csv\";\nfilter column \"cantidad_noches\" > 10;\nprint;"
+        },
+        {
+            "id": 15,
+            "nombre": "Reservas enero 2025",
+            "descripcion": "Reservas con ingreso en enero 2025",
+            "dsl": "load \"datos.csv\";\nfilter column \"fecha_ingreso\" BETWEEN \"2025-01-01\" AND \"2025-01-31\";\nprint;"
+        },
+        {
+            "id": 16,
+            "nombre": "Suites confirmadas",
+            "descripcion": "Suites con reservas confirmadas",
+            "dsl": "load \"datos.csv\";\nfilter column \"tipo_habitacion\" == \"suite\";\nfilter column \"estado_reserva\" == \"confirmada\";\nprint;"
+        },
+        {
+            "id": 17,
+            "nombre": "Total canceladas",
+            "descripcion": "Suma de precios de reservas canceladas",
+            "dsl": "load \"datos.csv\";\naggregate SUM column \"precio_noche\" where \"estado_reserva\" == \"cancelada\";\nprint;"
+        },
+        {
+            "id": 18,
+            "nombre": "Pagos electrónicos",
+            "descripcion": "Reservas pagadas con tarjeta o transferencia",
+            "dsl": "load \"datos.csv\";\nfilter column \"metodo_pago\" == \"tarjeta\" OR \"metodo_pago\" == \"transferencia\";\nprint;"
+        },
+        {
+            "id": 19,
+            "nombre": "Precio promedio estancias cortas",
+            "descripcion": "Promedio de precios para estancias de 3 a 5 noches",
+            "dsl": "load \"datos.csv\";\nfilter column \"cantidad_noches\" >= 3;\nfilter column \"cantidad_noches\" <= 5;\naggregate AVERAGE column \"precio_noche\";\nprint;"
+        },
+        {
+            "id": 20,
+            "nombre": "Reservas tercer trimestre 2024",
+            "descripcion": "Reservas entre julio y septiembre 2024",
+            "dsl": "load \"datos.csv\";\nfilter column \"fecha_ingreso\" BETWEEN \"2024-07-01\" AND \"2024-09-30\";\nprint;"
+        },
+        {
+            "id": 21,
+            "nombre": "Reservas cortas confirmadas",
+            "descripcion": "Reservas confirmadas con menos de 3 noches",
+            "dsl": "load \"datos.csv\";\nfilter column \"estado_reserva\" == \"confirmada\";\nfilter column \"cantidad_noches\" < 3;\nprint;"
+        },
+        {
+            "id": 22,
+            "nombre": "Habitaciones ocupadas",
+            "descripcion": "Filtra habitaciones con reservas activas",
+            "dsl": "load \"datos.csv\";\nfilter column \"habitacion\" != \"\";\nprint;"
+        },
+        {
+            "id": 23,
+            "nombre": "Reservas en fechas específicas",
+            "descripcion": "Reservas que inician en 2024-12-25 o 2025-01-01",
+            "dsl": "load \"datos.csv\";\nfilter column \"fecha_ingreso\" == \"2024-12-25\";\nfilter column \"fecha_ingreso\" == \"2025-01-29\";\nprint;"
+        },
+        {
+            "id": 24,
+            "nombre": "Precio promedio individuales",
+            "descripcion": "Promedio de precios en habitaciones individuales",
+            "dsl": "load \"datos.csv\";\nfilter column \"tipo_habitacion\" == \"individual\";\naggregate AVERAGE column \"precio_noche\";\nprint;"
+        },
+        {
+            "id": 25,
+            "nombre": "Reservas suites largas",
+            "descripcion": "Suites reservadas por más de 5 noches",
+            "dsl": "load \"datos.csv\";\nfilter column \"tipo_habitacion\" == \"suite\";\nfilter column \"cantidad_noches\" > 5;\nprint;"
+        },
+        {
+            "id": 26,
+            "nombre": "Clientes con reservas",
+            "descripcion": "Lista de clientes con reservas existentes",
+            "dsl": "load \"datos.csv\";\nfilter column \"nombre_cliente\" != \"\";\nprint;"
+        },
+        {
+            "id": 27,
+            "nombre": "Reservas de 4 a 5 noches",
+            "descripcion": "Filtra reservas con estancia media",
+            "dsl": "load \"datos.csv\";\nfilter column \"cantidad_noches\" >= 4;\nfilter column \"cantidad_noches\" <= 5;\nprint;"
+        },
+        {
+            "id": 28,
+            "nombre": "Pagos no electrónicos",
+            "descripcion": "Reservas no pagadas con tarjeta",
+            "dsl": "load \"datos.csv\";\nfilter column \"metodo_pago\" != \"tarjeta\";\nprint;"
+        },
+        {
+            "id": 29,
+            "nombre": "Estancia promedio general",
+            "descripcion": "Promedio de noches en todas las reservas",
+            "dsl": "load \"datos.csv\";\naggregate AVERAGE column \"cantidad_noches\";\nprint;"
+        },
+        {
+            "id": 30,
+            "nombre": "Reservas Navidad 2024",
+            "descripcion": "Reservas durante periodo navideño 2024",
+            "dsl": "load \"datos.csv\";\nfilter column \"fecha_ingreso\" BETWEEN \"2024-12-20\" AND \"2025-01-05\";\nprint;"
+        },
+        {
+            "id": 31,
+            "nombre": "Precios fuera de rango",
+            "descripcion": "Habitaciones con precios menores a 100 o mayores a 500",
+            "dsl": "load \"datos.csv\";\nfilter column \"precio_noche\" < 100 OR \"precio_noche\" > 500;\nprint;"
+        },
+        {
+            "id": 32,
+            "nombre": "Reservas recientes",
+            "descripcion": "Reservas desde noviembre 2024",
+            "dsl": "load \"datos.csv\";\nfilter column \"fecha_ingreso\" >= \"2024-11-01\";\nprint;"
+        },
+        {
+            "id": 33,
+            "nombre": "Conteo de habitaciones dobles",
+            "descripcion": "Total de reservas en habitaciones dobles",
+            "dsl": "load \"datos.csv\";\nfilter column \"tipo_habitacion\" == \"doble\";\naggregate COUNT column \"id_reserva\";\nprint;"
+        },
+        {
+            "id": 34,
+            "nombre": "Reservas económicas",
+            "descripcion": "Reservas con precio menor a 200",
+            "dsl": "load \"datos.csv\";\nfilter column \"precio_noche\" < 200;\nprint;"
+        },
+        {
+            "id": 35,
+            "nombre": "Clientes con reservas activas",
+            "descripcion": "Todos los clientes con reservas registros",
+            "dsl": "load \"datos.csv\";\nfilter column \"nombre_cliente\" != \"\";\nprint;"
+        },
+        {
+            "id": 36,
+            "nombre": "Temporada alta",
+            "descripcion": "Reservas en meses de mayor demanda",
+            "dsl": "load \"datos.csv\";\nfilter column \"fecha_ingreso\" BETWEEN \"2024-06-01\" AND \"2024-08-31\" OR \"fecha_ingreso\" BETWEEN \"2024-12-01\" AND \"2024-12-31\";\nprint;"
+        },
+        {
+            "id": 37,
+            "nombre": "Reservas con tarjeta",
+            "descripcion": "Conteo de reservas pagadas con tarjeta",
+            "dsl": "load \"datos.csv\";\nfilter column \"metodo_pago\" == \"tarjeta\";\naggregate COUNT column \"id_reserva\";\nprint;"
+        },
+        {
+            "id": 38,
+            "nombre": "Reservas de 1 noche",
+            "descripcion": "Reservas con estancia de 1 noche",
+            "dsl": "load \"datos.csv\";\nfilter column \"cantidad_noches\" == 1;\nprint;"
+        },
+        {
+            "id": 39,
+            "nombre": "Precios moderados",
+            "descripcion": "Reservas entre 200 y 400 por noche",
+            "dsl": "load \"datos.csv\";\nfilter column \"precio_noche\" >= 200;\nfilter column \"precio_noche\" <= 400;\nprint;"
+        },
+        {
+            "id": 40,
+            "nombre": "Habitaciones confirmadas",
+            "descripcion": "Habitaciones con reservas confirmadas",
+            "dsl": "load \"datos.csv\";\nfilter column \"habitacion\" != \"\";\nfilter column \"estado_reserva\" == \"confirmada\";\nprint;"
+        },
+        {
+            "id": 41,
+            "nombre": "Error: Columna inexistente",
+            "descripcion": "Intenta acceder a columna que no existe",
+            "dsl": "load \"datos.csv\";\nfilter column \"columna_fantasma\" == 100;\nprint;"
+        },
+        {
+            "id": 42,
+            "nombre": "Error: Tipo incorrecto",
+            "descripcion": "Compara número con texto",
+            "dsl": "load \"datos.csv\";\nfilter column \"precio_noche\" == \"cien\";\nprint;"
+        },
+        {
+            "id": 43,
+            "nombre": "Error: Sintaxis inválida",
+            "descripcion": "Falta punto y coma",
+            "dsl": "load \"datos.csv\"\nfilter column \"precio_noche\" > 200"
+        },
+        {
+            "id": 44,
+            "nombre": "Error: Función no soportada",
+            "descripcion": "Intenta usar función MAX no implementada",
+            "dsl": "load \"datos.csv\";\naggregate MAX column \"precio_noche\";\nprint;"
+        },
+        {
+            "id": 45,
+            "nombre": "Error: Agregación no numérica",
+            "descripcion": "Suma en columna de texto",
+            "dsl": "load \"datos.csv\";\naggregate SUM column \"nombre_cliente\";\nprint;"
+        },
+        {
+            "id": 46,
+            "nombre": "Error: BETWEEN no numérico",
+            "descripcion": "BETWEEN en columna texto",
+            "dsl": "load \"datos.csv\";\nfilter column \"nombre_cliente\" BETWEEN 100 AND 200;\nprint;"
+        },
+        {
+            "id": 47,
+            "nombre": "Error: Archivo no encontrado",
+            "descripcion": "Intenta cargar CSV inexistente",
+            "dsl": "load \"datos_inexistentes.csv\";\nprint;"
+        },
+        {
+            "id": 48,
+            "nombre": "Error: Operador inválido",
+            "descripcion": "Usa XOR no soportado",
+            "dsl": "load \"datos.csv\";\nfilter column \"precio_noche\" > 100 XOR \"tipo_habitacion\" == \"doble\";\nprint;"
+        },
+        {
+            "id": 49,
+            "nombre": "Error: Expresión incompleta",
+            "descripcion": "Falta parte de la expresión",
+            "dsl": "load \"datos.csv\";\nfilter column \"precio_noche\" == 100 AND; \nprint;"
+        },
+        {
+            "id": 50,
+            "nombre": "Error: Tipos mixtos",
+            "descripcion": "Mezcla números y textos en BETWEEN",
+            "dsl": "load \"datos.csv\";\nfilter column \"precio_noche\" BETWEEN \"cien\" AND 200;\nprint;"
+        }
+    ]
+}
