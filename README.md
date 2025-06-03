@@ -103,7 +103,7 @@ Si deseas mejorar este compilador, corregir errores o proponer nuevas funcionali
 ## 📬 Contacto
 
 * Email: [diegoguerrero@umariana.edu.co](mailto:diegoguerrerov@umariana.edu.co)
-* LinkedIn: [Diego Guerrero](https://www.linkedin.com/in/diego-guerrero-dev)
+* LinkedIn: [Diego Guerrero](https://www.linkedin.com/in/diego-guerrero-software/)
 * GitHub: [@Diego-9612](https://github.com/Diego-9612)
 
 ---
